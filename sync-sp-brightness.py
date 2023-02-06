@@ -14,7 +14,3 @@ def sync_brightness():
         main_screen_brightness = int(main_screen_brightness_file.read().strip())
     set_brightness(screenpad_brightness_path, main_screen_brightness)
     print("Brightness synced to:", main_screen_brightness)
-
-# create a GNOME keyboard shortcut to sync the brightness
-subprocess.run(["gsettings", "set", "org.gnome.desktop.wm.keybindings", "sync-brightness", "['<Ctrl><Alt>s']"])
-subprocess.run(["gsettings", "set", "org.gnome.desktop.wm.keybindings", "sync-brightness-command", "python3 -c 'import os; import sys; sys.path.append(os.getcwd()); import script; script.sync_brightness()'"])
