@@ -18,7 +18,7 @@ def install():
     #registering with dkms and installing
     subprocess.run(["sudo", "dkms", "add", "-m", "asus-wmi", "-v", "1.0"])
     subprocess.run(["sudo", "dkms", "build", "-m", "asus-wmi", "-v", "1.0"])
-    subprocess.run(["sudo", "dkms", "--force", y"install", "-m", "asus-wmi", "-v", "1.0"])
+    subprocess.run(["sudo", "dkms", "--force", "install", "-m", "asus-wmi", "-v", "1.0"])
 
     print("installed wmi-screenpad")
 
