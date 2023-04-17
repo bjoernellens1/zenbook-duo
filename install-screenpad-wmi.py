@@ -9,7 +9,7 @@ def install():
     subprocess.run(["sudo", "wget", "https://github.com/Plippo/asus-wmi-screenpad/archive/master.zip"])
     subprocess.run(["sudo", "unzip", "master.zip"])
     subprocess.run(["sudo", "mv", "asus-wmi-screenpad-master/*", "."])
-    subprocess.run(["sudo", "rmdir", "asus-wmi-screenpad-master"])
+    subprocess.run(["sudo", "rm", "-r", "asus-wmi-screenpad-master"])
     subprocess.run(["sudo", "rm", "master.zip"])
 
     #preparing for current kernel
