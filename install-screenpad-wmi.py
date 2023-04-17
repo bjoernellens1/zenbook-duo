@@ -51,5 +51,7 @@ if __name__ == '__main__':
         remove()
     elif args.action == "reinstall":
         reinstall()
+    elif args.action =="install_extras":
+        install_extras()
     else:
         print("Invalid action. Please specify install, remove, or reinstall.")

@@ -1,6 +1,8 @@
 install:
 	python3 install-screenpad-wmi.py install
 
+install_extras:
+	python3 install-screenpad-wmi.py install_extras
 remove:
 	python3 install-screenpad-wmi.py remove
 
