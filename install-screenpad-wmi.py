@@ -32,6 +32,14 @@ def reinstall():
     install()
     print("reinstall complete")
 
+def install_extras():
+    
+    subprocess.run(["cd", "/tmp"])
+    subprocess.run(["git", "clone", "https://github.com/mjollnir14/gnome-shell-extension-zenbook-duo.git"])
+    subprocess.run(["cd", "gnome-shell-extension-zenbook-duo"])
+    subprocess.run(["make", "install"])
+    print("install_extras complete")
+
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument("action", help="Action to perform: install, remove, or reinstall")
