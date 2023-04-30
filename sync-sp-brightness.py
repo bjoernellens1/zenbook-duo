@@ -10,7 +10,10 @@ sp = screenpad()
 
 class MyHandler(FileSystemEventHandler):
     def on_modified(self, event):
-        sp.sync_brightness()
+        if sp.get_brightness(sp.sp_brightness_path) != 0:
+            sp.sync_brightness()
+        else:
+            pass
 
 if __name__ == "__main__":
     # specify the file to monitor
