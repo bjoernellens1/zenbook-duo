@@ -1,5 +1,8 @@
 # with some help from ChatGPT and the work from https://github.com/Plippo/asus-wmi-screenpad
 # rework
+
+#!/usr/bin/env python3
+
 import os
 
 class screenpad():
